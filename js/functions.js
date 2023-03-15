@@ -1,8 +1,9 @@
 $("#nuevoUsuario").click(function() {
-    var nombre = $("#nombre").val(); //capturar el valor del campo con id nombre
-    var identificacion = $("#identificacion").val(); //capturar el valor del campo con id identificacion
-    $('#usuarios tr:last').after('<tr><td>' + nombre + '</td><td>' + identificacion + '</td></tr>'); //agrega un nuevo registro a la tabla, después del último tr
-    $('#nuevoUsuarioModal').modal('toggle'); //cierra el modal
+    var nombre = $("#nombre").val();
+    var apellido = $("#apellido").val(); // Agregar esta línea para capturar el valor del campo con id apellido
+    var identificacion = $("#identificacion").val();
+    $('#usuarios tr:last').after('<tr><td>' + nombre + '</td><td>' + apellido + '</td><td>' + identificacion + '</td></tr>'); // Agregar la variable "apellido" a la cadena de texto que se inserta en la tabla
+    $('#nuevoUsuarioModal').modal('toggle');
 });
 window.addEventListener('DOMContentLoaded', () => {
     let scrollPos = 0;
