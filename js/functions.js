@@ -5,6 +5,14 @@ $("#nuevoUsuario").click(function() {
     $('#usuarios tr:last').after('<tr><td>' + nombre + '</td><td>' + apellido + '</td><td>' + identificacion + '</td></tr>'); // Agregar la variable "apellido" a la cadena de texto que se inserta en la tabla
     $('#nuevoUsuarioModal').modal('toggle');
 });
+$("#nuevoEmpleado").click(function() {
+    var nombre = $("#nombre").val();
+    var apellido = $("#apellido").val();
+    var identificacion = $("#identificacion").val();
+    var cargo = $("#cargo").val(); // Agregar esta línea para capturar el valor del campo con id cargo
+    $('#usuarios tr:last').after('<tr><td>' + nombre + '</td><td>' + apellido + '</td><td>' + identificacion + '</td><td>' + cargo + '</td></tr>'); // Agregar la variable "cargo" a la cadena de texto que se inserta en la tabla
+    $('#nuevoEmpleadoModal').modal('toggle');
+});
 window.addEventListener('DOMContentLoaded', () => {
     let scrollPos = 0;
     const mainNav = document.getElementById('mainNav');
